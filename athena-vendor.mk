@@ -97,7 +97,6 @@ PRODUCT_COPY_FILES += \
     vendor/blackberry/athena/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt
 
 PRODUCT_PACKAGES += \
-    audio.primary.sdm660 \
     libFlacSwDec \
     libacdb-fts \
     libacdbloader \
@@ -106,7 +105,6 @@ PRODUCT_PACKAGES += \
     libadsp_default_listener \
     libadsprpc \
     libaudcal \
-    libaudio_log_utils \
     libaudioalsa \
     libaudioparsers \
     libcdsprpc \
