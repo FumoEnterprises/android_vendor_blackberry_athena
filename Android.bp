@@ -279,10 +279,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libadsprpc.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libcutils",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -292,10 +297,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libadsprpc.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libcutils",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -422,7 +432,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcdsprpc",
+    name: "libcdsp_default_listener",
     owner: "blackberry",
     strip: {
         none: true,
@@ -430,11 +440,11 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libcdsprpc.so",
+                "proprietary/vendor/lib/libcdsp_default_listener.so",
             ],
             shared_libs: [
                 "liblog",
-                "libcutils",
+                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -443,11 +453,11 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libcdsprpc.so",
+                "proprietary/vendor/lib64/libcdsp_default_listener.so",
             ],
             shared_libs: [
                 "liblog",
-                "libcutils",
+                "libcdsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -461,7 +471,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfastcrc",
+    name: "libcdsprpc",
     owner: "blackberry",
     strip: {
         none: true,
@@ -469,26 +479,36 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/libfastcrc.so",
+                "proprietary/vendor/lib/libcdsprpc.so",
             ],
             shared_libs: [
-                "libcutils",
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libfastcrc.so",
+                "proprietary/vendor/lib64/libcdsprpc.so",
             ],
             shared_libs: [
-                "libcutils",
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -551,6 +571,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
+                "libion",
                 "libOpenCL",
                 "libc++",
                 "libc",
@@ -564,44 +585,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
+                "libion",
                 "libOpenCL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libfastrpc_utf_stub",
-    owner: "blackberry",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libfastrpc_utf_stub.so",
-            ],
-            shared_libs: [
-                "libadsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libfastrpc_utf_stub.so",
-            ],
-            shared_libs: [
-                "libadsprpc",
                 "libc++",
                 "libc",
                 "libm",
@@ -626,10 +611,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libmdsprpc.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libcutils",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -639,10 +629,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libmdsprpc.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libcutils",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -1526,10 +1521,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libsdsprpc.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
-                "libcutils",
-                "libc++",
                 "libc",
+                "libcutils",
+                "libion",
+                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -1539,8 +1539,50 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsdsprpc.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "vendor.qti.hardware.dsp@1.0",
                 "liblog",
+                "libc",
                 "libcutils",
+                "libion",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsysmon_cdsp_skel",
+    owner: "blackberry",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libsysmon_cdsp_skel.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsysmon_cdsp_skel.so",
+            ],
+            shared_libs: [
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -2243,6 +2285,49 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.dsp@1.0",
+    owner: "blackberry",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.dsp@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.dsp@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "camera.sdm660",
     owner: "blackberry",
     strip: {
@@ -2668,10 +2753,20 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libadsp_hvx_callback_skel.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libmmcamera_dbg",
+                "libcdsprpc",
+                "libadsp_hvx_stub",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -2687,10 +2782,19 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libadsp_hvx_stub.so",
             ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libmmcamera_dbg",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
     compile_multilib: "32",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -28585,6 +28689,62 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libFlacSwDec",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "cdsprpcd",
+    owner: "blackberry",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/cdsprpcd",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "dspservice",
+    owner: "blackberry",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/dspservice",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhardware",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libavservices_minijail",
+                "vendor.qti.hardware.dsp@1.0",
                 "libc++",
                 "libc",
                 "libm",

@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k4h7_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7_athena_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-gf5216.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-gf5216.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/goodix.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/goodix.fingerprint.rc \
+    vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
+    vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
+    vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/blackberry/athena/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
     vendor/blackberry/athena/proprietary/vendor/firmware/a512_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b01 \
@@ -107,11 +110,10 @@ PRODUCT_PACKAGES += \
     libaudcal \
     libaudioalsa \
     libaudioparsers \
+    libcdsp_default_listener \
     libcdsprpc \
-    libfastcrc \
     libfastcvadsp_stub \
     libfastcvopt \
-    libfastrpc_utf_stub \
     libmdsprpc \
     libmm-color-convertor \
     libmm-hdcpmgr \
@@ -142,6 +144,7 @@ PRODUCT_PACKAGES += \
     libscvePanorama \
     libscvePanorama_lite \
     libsdsprpc \
+    libsysmon_cdsp_skel \
     libtinycompress_vendor \
     libvideoutils \
     libwebrtc_audio_preprocessing \
@@ -159,6 +162,7 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libvisualizer \
     libvolumelistener \
+    vendor.qti.hardware.dsp@1.0 \
     camera.sdm660 \
     libactuator_ad5816g \
     libactuator_ad5823 \
@@ -1548,5 +1552,7 @@ PRODUCT_PACKAGES += \
     libscveT2T_skel \
     adsprpcd \
     audioflacapp \
+    cdsprpcd \
+    dspservice \
     gx_fpd \
     mm-qcamera-app
