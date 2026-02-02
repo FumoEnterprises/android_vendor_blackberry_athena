@@ -67,7 +67,6 @@ PRODUCT_COPY_FILES += \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k4h7_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7_athena_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-gf5216.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-gf5216.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/goodix.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/goodix.fingerprint.rc \
-    vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
