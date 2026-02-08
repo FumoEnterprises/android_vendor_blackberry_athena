@@ -53,7 +53,10 @@ PRODUCT_COPY_FILES += \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l7_8953_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l7_8953_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l7_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l7_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l7sx_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l7sx_chromatix.xml \
+    vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l8_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l8_athena_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l9_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l9_athena_chromatix.xml \
+    vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l9_qtech_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l9_qtech_athena_chromatix.xml \
+    vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k2l9_sunny_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k2l9_sunny_athena_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3l8_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3l8_f3l8yam_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_f3l8yam_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3l8_mono_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_mono_chromatix.xml \
@@ -61,11 +64,15 @@ PRODUCT_COPY_FILES += \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3m2xm_chromatix_bear.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m2xm_chromatix_bear.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3m2xx_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m2xx_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3m3_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_athena_chromatix.xml \
+    vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3m3_qtech_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_qtech_athena_chromatix.xml \
+    vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3m3_sunny_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_sunny_athena_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3m3sm_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3sm_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3p3sm_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3p3sm_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k3p8sp_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3p8sp_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/camera/s5k4h7_athena_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7_athena_chromatix.xml \
     vendor/blackberry/athena/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-gf5216.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-gf5216.rc \
+    vendor/blackberry/athena/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
+    vendor/blackberry/athena/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service-qti.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/goodix.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/goodix.fingerprint.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/blackberry/athena/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
@@ -99,6 +106,7 @@ PRODUCT_COPY_FILES += \
     vendor/blackberry/athena/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt
 
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl-qti \
     libFlacSwDec \
     libacdb-fts \
     libacdbloader \
@@ -111,8 +119,12 @@ PRODUCT_PACKAGES += \
     libaudioparsers \
     libcdsp_default_listener \
     libcdsprpc \
+    libdualcameraddm \
     libfastcvadsp_stub \
     libfastcvopt \
+    libkeymasterdeviceutils \
+    libkeymasterprovision \
+    libkeymasterutils \
     libmdsprpc \
     libmm-color-convertor \
     libmm-hdcpmgr \
@@ -167,8 +179,11 @@ PRODUCT_PACKAGES += \
     libactuator_ad5823 \
     libactuator_ak7345 \
     libactuator_ak7371 \
+    libactuator_ak7374_athena \
     libactuator_bu64244gwz \
     libactuator_bu64297 \
+    libactuator_bu64297gwz_athena \
+    libactuator_bu64297gwz_luna \
     libactuator_dw9714 \
     libactuator_dw9716 \
     libactuator_dw9761b \
@@ -185,6 +200,7 @@ PRODUCT_PACKAGES += \
     libadm \
     libadsp_hvx_callback_skel \
     libadsp_hvx_stub \
+    libchromaflash \
     libchromatix_csidtg_common \
     libchromatix_csidtg_cpp_preview \
     libchromatix_csidtg_postproc \
@@ -1130,6 +1146,162 @@ PRODUCT_PACKAGES += \
     libchromatix_s5k2l7sx_video_4k \
     libchromatix_s5k2l7sx_zsl_preview_3a \
     libchromatix_s5k2l7sx_zsl_video_3a \
+    libchromatix_s5k2l8_athena_1080p_preview_lc898212xd \
+    libchromatix_s5k2l8_athena_1080p_video_lc898212xd \
+    libchromatix_s5k2l8_athena_4k_12M_preview_lc898212xd \
+    libchromatix_s5k2l8_athena_4k_12M_video_lc898212xd \
+    libchromatix_s5k2l8_athena_4k_preview_lc898212xd \
+    libchromatix_s5k2l8_athena_4k_video_lc898212xd \
+    libchromatix_s5k2l8_athena_common \
+    libchromatix_s5k2l8_athena_cpp_hfr_120 \
+    libchromatix_s5k2l8_athena_cpp_hfr_240 \
+    libchromatix_s5k2l8_athena_cpp_hfr_60 \
+    libchromatix_s5k2l8_athena_cpp_liveshot \
+    libchromatix_s5k2l8_athena_cpp_multi_snapshot \
+    libchromatix_s5k2l8_athena_cpp_preview \
+    libchromatix_s5k2l8_athena_cpp_snapshot \
+    libchromatix_s5k2l8_athena_cpp_snapshot_raw_hdr \
+    libchromatix_s5k2l8_athena_cpp_video \
+    libchromatix_s5k2l8_athena_cpp_video_4k \
+    libchromatix_s5k2l8_athena_cpp_video_4k_raw_hdr \
+    libchromatix_s5k2l8_athena_default_video \
+    libchromatix_s5k2l8_athena_full_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l8_athena_fullsize_preview_lc898212xd \
+    libchromatix_s5k2l8_athena_fullsize_video_lc898212xd \
+    libchromatix_s5k2l8_athena_hfr_120 \
+    libchromatix_s5k2l8_athena_hfr_120_lc898212xd \
+    libchromatix_s5k2l8_athena_hfr_240 \
+    libchromatix_s5k2l8_athena_hfr_240_lc898212xd \
+    libchromatix_s5k2l8_athena_hfr_60 \
+    libchromatix_s5k2l8_athena_hfr_60_lc898212xd \
+    libchromatix_s5k2l8_athena_postproc \
+    libchromatix_s5k2l8_athena_preview \
+    libchromatix_s5k2l8_athena_qtrsize_preview_lc898212xd \
+    libchromatix_s5k2l8_athena_qtrsize_video_lc898212xd \
+    libchromatix_s5k2l8_athena_snapshot \
+    libchromatix_s5k2l8_athena_snapshot_raw_hdr \
+    libchromatix_s5k2l8_athena_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l8_athena_video_12M_raw_hdr_lc898212xd \
+    libchromatix_s5k2l8_athena_video_4k \
+    libchromatix_s5k2l8_athena_video_4k_raw_hdr \
+    libchromatix_s5k2l8_athena_video_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_athena_1080p_preview_lc898212xd \
+    libchromatix_s5k2l9_athena_1080p_video_lc898212xd \
+    libchromatix_s5k2l9_athena_4k_12M_preview_lc898212xd \
+    libchromatix_s5k2l9_athena_4k_12M_video_lc898212xd \
+    libchromatix_s5k2l9_athena_4k_preview_lc898212xd \
+    libchromatix_s5k2l9_athena_4k_video_lc898212xd \
+    libchromatix_s5k2l9_athena_common \
+    libchromatix_s5k2l9_athena_cpp_hfr_120 \
+    libchromatix_s5k2l9_athena_cpp_hfr_240 \
+    libchromatix_s5k2l9_athena_cpp_hfr_60 \
+    libchromatix_s5k2l9_athena_cpp_liveshot \
+    libchromatix_s5k2l9_athena_cpp_preview \
+    libchromatix_s5k2l9_athena_cpp_snapshot \
+    libchromatix_s5k2l9_athena_cpp_snapshot_raw_hdr \
+    libchromatix_s5k2l9_athena_cpp_video \
+    libchromatix_s5k2l9_athena_cpp_video_4k \
+    libchromatix_s5k2l9_athena_cpp_video_4k_raw_hdr \
+    libchromatix_s5k2l9_athena_default_video \
+    libchromatix_s5k2l9_athena_full_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_athena_fullsize_preview_lc898212xd \
+    libchromatix_s5k2l9_athena_fullsize_video_lc898212xd \
+    libchromatix_s5k2l9_athena_hfr_120 \
+    libchromatix_s5k2l9_athena_hfr_120_lc898212xd \
+    libchromatix_s5k2l9_athena_hfr_240 \
+    libchromatix_s5k2l9_athena_hfr_240_lc898212xd \
+    libchromatix_s5k2l9_athena_hfr_60 \
+    libchromatix_s5k2l9_athena_hfr_60_lc898212xd \
+    libchromatix_s5k2l9_athena_postproc \
+    libchromatix_s5k2l9_athena_preview \
+    libchromatix_s5k2l9_athena_qtrsize_preview_lc898212xd \
+    libchromatix_s5k2l9_athena_qtrsize_video_lc898212xd \
+    libchromatix_s5k2l9_athena_snapshot \
+    libchromatix_s5k2l9_athena_snapshot_raw_hdr \
+    libchromatix_s5k2l9_athena_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_athena_video_12M_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_athena_video_4k \
+    libchromatix_s5k2l9_athena_video_4k_raw_hdr \
+    libchromatix_s5k2l9_athena_video_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_1080p_preview_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_1080p_video_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_4k_12M_preview_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_4k_12M_video_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_4k_preview_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_4k_video_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_bokeh_common \
+    libchromatix_s5k2l9_qtech_athena_common \
+    libchromatix_s5k2l9_qtech_athena_cpp_hfr_120 \
+    libchromatix_s5k2l9_qtech_athena_cpp_hfr_240 \
+    libchromatix_s5k2l9_qtech_athena_cpp_hfr_60 \
+    libchromatix_s5k2l9_qtech_athena_cpp_liveshot \
+    libchromatix_s5k2l9_qtech_athena_cpp_multi_snapshot \
+    libchromatix_s5k2l9_qtech_athena_cpp_preview \
+    libchromatix_s5k2l9_qtech_athena_cpp_snapshot \
+    libchromatix_s5k2l9_qtech_athena_cpp_snapshot_raw_hdr \
+    libchromatix_s5k2l9_qtech_athena_cpp_video \
+    libchromatix_s5k2l9_qtech_athena_cpp_video_4k \
+    libchromatix_s5k2l9_qtech_athena_cpp_video_4k_raw_hdr \
+    libchromatix_s5k2l9_qtech_athena_default_video \
+    libchromatix_s5k2l9_qtech_athena_full_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_fullsize_preview_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_fullsize_video_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_hfr_120 \
+    libchromatix_s5k2l9_qtech_athena_hfr_120_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_hfr_240 \
+    libchromatix_s5k2l9_qtech_athena_hfr_240_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_hfr_60 \
+    libchromatix_s5k2l9_qtech_athena_hfr_60_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_postproc \
+    libchromatix_s5k2l9_qtech_athena_preview \
+    libchromatix_s5k2l9_qtech_athena_qtrsize_preview_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_qtrsize_video_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_snapshot \
+    libchromatix_s5k2l9_qtech_athena_snapshot_raw_hdr \
+    libchromatix_s5k2l9_qtech_athena_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_video_12M_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_qtech_athena_video_4k \
+    libchromatix_s5k2l9_qtech_athena_video_4k_raw_hdr \
+    libchromatix_s5k2l9_qtech_athena_video_common \
+    libchromatix_s5k2l9_qtech_athena_video_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_1080p_preview_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_1080p_video_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_4k_12M_preview_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_4k_12M_video_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_4k_preview_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_4k_video_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_common \
+    libchromatix_s5k2l9_sunny_athena_cpp_hfr_120 \
+    libchromatix_s5k2l9_sunny_athena_cpp_hfr_240 \
+    libchromatix_s5k2l9_sunny_athena_cpp_hfr_60 \
+    libchromatix_s5k2l9_sunny_athena_cpp_liveshot \
+    libchromatix_s5k2l9_sunny_athena_cpp_preview \
+    libchromatix_s5k2l9_sunny_athena_cpp_snapshot \
+    libchromatix_s5k2l9_sunny_athena_cpp_snapshot_raw_hdr \
+    libchromatix_s5k2l9_sunny_athena_cpp_video \
+    libchromatix_s5k2l9_sunny_athena_cpp_video_4k \
+    libchromatix_s5k2l9_sunny_athena_cpp_video_4k_raw_hdr \
+    libchromatix_s5k2l9_sunny_athena_default_video \
+    libchromatix_s5k2l9_sunny_athena_full_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_fullsize_preview_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_fullsize_video_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_hfr_120 \
+    libchromatix_s5k2l9_sunny_athena_hfr_120_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_hfr_240 \
+    libchromatix_s5k2l9_sunny_athena_hfr_240_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_hfr_60 \
+    libchromatix_s5k2l9_sunny_athena_hfr_60_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_postproc \
+    libchromatix_s5k2l9_sunny_athena_preview \
+    libchromatix_s5k2l9_sunny_athena_qtrsize_preview_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_qtrsize_video_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_snapshot \
+    libchromatix_s5k2l9_sunny_athena_snapshot_raw_hdr \
+    libchromatix_s5k2l9_sunny_athena_snapshot_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_video_12M_raw_hdr_lc898212xd \
+    libchromatix_s5k2l9_sunny_athena_video_4k \
+    libchromatix_s5k2l9_sunny_athena_video_4k_raw_hdr \
+    libchromatix_s5k2l9_sunny_athena_video_raw_hdr_lc898212xd \
     libchromatix_s5k3l8_common \
     libchromatix_s5k3l8_cpp_hfr_120 \
     libchromatix_s5k3l8_cpp_hfr_60 \
@@ -1295,6 +1467,49 @@ PRODUCT_PACKAGES += \
     libchromatix_s5k3m3_athena_video_4k \
     libchromatix_s5k3m3_athena_zsl_preview_3a \
     libchromatix_s5k3m3_athena_zsl_video_3a \
+    libchromatix_s5k3m3_qtech_athena_4k_preview_3a \
+    libchromatix_s5k3m3_qtech_athena_4k_video_3a \
+    libchromatix_s5k3m3_qtech_athena_common \
+    libchromatix_s5k3m3_qtech_athena_cpp_hfr_60 \
+    libchromatix_s5k3m3_qtech_athena_cpp_liveshot \
+    libchromatix_s5k3m3_qtech_athena_cpp_multi_snapshot \
+    libchromatix_s5k3m3_qtech_athena_cpp_preview \
+    libchromatix_s5k3m3_qtech_athena_cpp_snapshot \
+    libchromatix_s5k3m3_qtech_athena_cpp_video \
+    libchromatix_s5k3m3_qtech_athena_cpp_video_4k \
+    libchromatix_s5k3m3_qtech_athena_default_preview_3a \
+    libchromatix_s5k3m3_qtech_athena_default_video_3a \
+    libchromatix_s5k3m3_qtech_athena_hfr60_3a \
+    libchromatix_s5k3m3_qtech_athena_hfr_60 \
+    libchromatix_s5k3m3_qtech_athena_liveshot \
+    libchromatix_s5k3m3_qtech_athena_postproc \
+    libchromatix_s5k3m3_qtech_athena_preview \
+    libchromatix_s5k3m3_qtech_athena_snapshot \
+    libchromatix_s5k3m3_qtech_athena_video \
+    libchromatix_s5k3m3_qtech_athena_video_4k \
+    libchromatix_s5k3m3_qtech_athena_zsl_preview_3a \
+    libchromatix_s5k3m3_qtech_athena_zsl_video_3a \
+    libchromatix_s5k3m3_sunny_athena_4k_preview_3a \
+    libchromatix_s5k3m3_sunny_athena_4k_video_3a \
+    libchromatix_s5k3m3_sunny_athena_common \
+    libchromatix_s5k3m3_sunny_athena_cpp_hfr_60 \
+    libchromatix_s5k3m3_sunny_athena_cpp_liveshot \
+    libchromatix_s5k3m3_sunny_athena_cpp_preview \
+    libchromatix_s5k3m3_sunny_athena_cpp_snapshot \
+    libchromatix_s5k3m3_sunny_athena_cpp_video \
+    libchromatix_s5k3m3_sunny_athena_cpp_video_4k \
+    libchromatix_s5k3m3_sunny_athena_default_preview_3a \
+    libchromatix_s5k3m3_sunny_athena_default_video_3a \
+    libchromatix_s5k3m3_sunny_athena_hfr60_3a \
+    libchromatix_s5k3m3_sunny_athena_hfr_60 \
+    libchromatix_s5k3m3_sunny_athena_liveshot \
+    libchromatix_s5k3m3_sunny_athena_postproc \
+    libchromatix_s5k3m3_sunny_athena_preview \
+    libchromatix_s5k3m3_sunny_athena_snapshot \
+    libchromatix_s5k3m3_sunny_athena_video \
+    libchromatix_s5k3m3_sunny_athena_video_4k \
+    libchromatix_s5k3m3_sunny_athena_zsl_preview_3a \
+    libchromatix_s5k3m3_sunny_athena_zsl_video_3a \
     libchromatix_s5k3m3sm_4k_preview_3a \
     libchromatix_s5k3m3sm_4k_video_3a \
     libchromatix_s5k3m3sm_common \
@@ -1360,11 +1575,13 @@ PRODUCT_PACKAGES += \
     libchromatix_s5k4h7_athena_zsl_video_ad5816g \
     libdepthmapwrapper \
     libdrc \
+    libedge_smooth_hvx_stub \
     libflash_pmic \
     libhal_dbg \
     libjpegdhw \
     libjpegdmahw \
     libjpegehw \
+    libllvd_smore \
     libmm-qcamera \
     libmmcamera2_c2d_module \
     libmmcamera2_cpp_module \
@@ -1379,10 +1596,13 @@ PRODUCT_PACKAGES += \
     libmmcamera2_stats_modules \
     libmmcamera_atmel_at24c32e_eeprom \
     libmmcamera_bokeh \
+    libmmcamera_bokeh_oem \
+    libmmcamera_chromaflash_lib \
     libmmcamera_csidtg \
     libmmcamera_depth_map \
     libmmcamera_dummyalgo \
     libmmcamera_dw9761b_2d_eeprom \
+    libmmcamera_edgesmooth_lib \
     libmmcamera_eebinparse \
     libmmcamera_eeprom_util \
     libmmcamera_eztune_module \
@@ -1453,12 +1673,15 @@ PRODUCT_PACKAGES += \
     libmmcamera_isp_sub_module \
     libmmcamera_le2464c_eeprom \
     libmmcamera_le2464c_master_eeprom \
+    libmmcamera_llvd \
     libmmcamera_m24c64s_eeprom \
+    libmmcamera_nighthawk \
     libmmcamera_ofilm_ohs0443_ov12a10_eeprom \
     libmmcamera_ofilm_ohs0443_ov13880_eeprom \
     libmmcamera_onsemi_cat24c16_eeprom \
     libmmcamera_onsemi_cat24c32_eeprom \
     libmmcamera_onsemi_cat24c32_imx362_eeprom \
+    libmmcamera_optizoom_lib \
     libmmcamera_ov12a10 \
     libmmcamera_ov13850 \
     libmmcamera_ov13850_q13v06k \
@@ -1476,6 +1699,8 @@ PRODUCT_PACKAGES += \
     libmmcamera_ov5695 \
     libmmcamera_ov7251 \
     libmmcamera_ov8856 \
+    libmmcamera_ov8856_2lane \
+    libmmcamera_ov8856_4lane \
     libmmcamera_ov8858 \
     libmmcamera_ov8865 \
     libmmcamera_paaf_lib \
@@ -1485,25 +1710,39 @@ PRODUCT_PACKAGES += \
     libmmcamera_ppeiscore \
     libmmcamera_qtech_f3l8yam_eeprom \
     libmmcamera_qtech_f5670bq_eeprom \
+    libmmcamera_qtech_s5k2l9_athena_eeprom \
+    libmmcamera_qtech_s5k3m3_athena_eeprom \
     libmmcamera_quadracfa \
     libmmcamera_rohm_brcg064gwz_3_eeprom \
     libmmcamera_s5k2l7 \
     libmmcamera_s5k2l7sx \
+    libmmcamera_s5k2l8_athena \
     libmmcamera_s5k2l9_athena \
+    libmmcamera_s5k2l9_qtech_athena \
+    libmmcamera_s5k2l9_sunny_athena \
     libmmcamera_s5k3l8 \
+    libmmcamera_s5k3l8_luna \
+    libmmcamera_s5k3l8_luna_eeprom \
     libmmcamera_s5k3l8_mono \
     libmmcamera_s5k3m2xm \
     libmmcamera_s5k3m2xx \
     libmmcamera_s5k3m3_athena \
+    libmmcamera_s5k3m3_qtech_athena \
+    libmmcamera_s5k3m3_sunny_athena \
     libmmcamera_s5k3m3sm \
     libmmcamera_s5k3p3sm \
     libmmcamera_s5k3p8sp \
     libmmcamera_s5k4h7_athena \
+    libmmcamera_sat_test_lib \
     libmmcamera_sony_imx214_eeprom \
     libmmcamera_sony_imx298_eeprom \
     libmmcamera_sony_imx378_eeprom \
     libmmcamera_sonyimx135_eeprom \
+    libmmcamera_stillmore_lib \
     libmmcamera_sunny_8865_eeprom \
+    libmmcamera_sunny_a12s07c_s5k2l8sx_eeprom \
+    libmmcamera_sunny_a8s02c_s5k4h7_eeprom \
+    libmmcamera_sunny_d5h05e_hi556_eeprom \
     libmmcamera_sunny_gt24c64_imx298_eeprom \
     libmmcamera_sunny_gt24c64_s5k2l7_eeprom \
     libmmcamera_sunny_gt24c64_s5k2l7sx_eeprom \
@@ -1512,24 +1751,33 @@ PRODUCT_PACKAGES += \
     libmmcamera_sunny_ov13855_eeprom \
     libmmcamera_sunny_q13v06k_eeprom \
     libmmcamera_sunny_q5v41b_eeprom \
+    libmmcamera_sunny_s5k2l9_athena_eeprom \
+    libmmcamera_sunny_s5k3m3_athena_eeprom \
     libmmcamera_sw2d_lib \
     libmmcamera_thread_services \
+    libmmcamera_trueportrait_lib \
     libmmcamera_truly_cma481_eeprom \
     libmmcamera_truly_cmb433_eeprom \
     libmmcamera_tuning \
     libmmcamera_tuning_lookup \
+    libmmcamera_ubifocus_lib \
     libmmjpeg \
     libmmjpeg_interface \
     libmmlib2d_interface \
     libmmqjpeg_codec \
     libmmqjpegdma \
+    liboptizoom \
     libqomx_core \
     libqomx_jpegdec \
     libqomx_jpegenc \
     libqomx_jpegenc_pipe \
     libremosaic_daemon \
+    libseemore \
     libsurround_3mic_proc \
+    libtrueportrait_vendor \
+    libubifocus \
     libqcreverb \
+    android.hardware.gatekeeper@1.0-impl-qti \
     fingerprint.goodix \
     gxfingerprint.default \
     libfp_client \
@@ -1554,4 +1802,10 @@ PRODUCT_PACKAGES += \
     cdsprpcd \
     dspservice \
     gx_fpd \
+    android.hardware.gatekeeper@1.0-service-qti \
+    android.hardware.keymaster@3.0-service-qti \
     mm-qcamera-app
+
+PRODUCT_PACKAGES += \
+    vendor_lib_android_hardware_keymaster@3_0-impl-qti_so \
+    vendor_lib64_android_hardware_keymaster@3_0-impl-qti_so
